@@ -1,0 +1,537 @@
+@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;700&family=Roboto:wght@100;300;400&display=swap');
+
+:root{
+    --body-background:linear-gradient(to bottom, #fff 12%, #f0f9f9 15.74%, #f0f9f9 100%);
+    --black:#222;
+    --green: #177;
+    --yellow:#ffd977 ;
+    --brown: #b5460f;
+    --title-font: 'Frank Ruhl Libre', Georgia, serif;
+    --text-font: 'Roboto', sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--black);
+    text-decoration: none;
+    font-family: var(--text-font);
+}
+body{
+    background: var(--body-background);
+}
+/*large devices*/
+@media (min-width:1120px){
+    h1,
+        h2,
+        h3 {
+            font-family: var(--title-font);
+        }
+    
+        .container {
+            width: 1000px;
+            margin: 0 auto;
+        }
+    
+        h2>a {
+            font-family: var(--title-font) !important;
+            font-size: 38px;
+            margin: 20px 0px;
+            border-bottom: 2px solid var(--yellow);
+            transition: all .2s;
+    
+    
+        }
+    
+        h2>i.fa-solid {
+            color: var(--brown);
+        }
+    
+        h2:hover>i.fa-solid {
+            color: var(--green);
+        }
+    
+        .card {
+            background-color: white;
+            margin: 10px;
+            transition: all .3s;
+    
+        }
+    
+        .card:hover {
+            box-shadow: 7px 8px 0px -1px var(--yellow);
+            -webkit-box-shadow: 7px 8px 0px -1px var(--yellow);
+            -moz-box-shadow: 7px 8px 0px -1px var(--yellow);
+        }
+    
+        .card-image {
+            overflow: hidden;
+        }
+    
+        .card-image img {
+            width: 100%;
+            display: block;
+        }
+    
+        .card-body {
+            padding: 10px;
+        }
+    
+        .card-body h4 {
+            color: var(--brown);
+            font-weight: 500;
+        }
+    
+        .card-body h3 {
+            padding: 10px 0px;
+        }
+    
+        .card-body .time-ratings {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+    
+        }
+    
+        .stars i {
+            color: var(--green);
+        }
+    
+        .recipes-suggestions h2 a {
+            color: var(--brown);
+            text-decoration: none;
+        }
+    
+        .banner img {
+            width: 400px;
+        }
+    
+        /*HEADER*/
+        header {
+            width: 100%;
+            height: 77px;
+            border-bottom: 1px solid var(--yellow);
+            padding: 0px 30px;
+            display: grid;
+            grid-template-columns: 220px 1fr 100px;
+            align-items: center;
+    
+        }
+    
+        header nav ul li {
+            padding: 0 10px;
+        }
+    
+        header .logo img {
+            width: 150px;
+        }
+    
+        header nav a {
+            font-weight: bold;
+            text-decoration: none;
+        }
+    
+        header nav i.fa-angle-down {
+            color: var(--brown);
+            padding-left: 5px;
+        }
+    
+        header nav a:hover {
+            border-bottom: 3px solid var(--yellow);
+        }
+    
+        header nav ul,
+        header .favicon-search ul {
+            list-style-type: none;
+            display: flex;
+            align-items: center;
+        }
+    
+        header .favicon-search li i {
+            color: var(--brown);
+        }
+    
+        header nav ul li ul {
+            /* display: none; */
+            visibility: hidden;
+            width: 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            border: 1px solid var(--yellow);
+            display: none;
+    
+        }
+    
+        header nav ul.submenu li {
+            width: 200px;
+            padding: 10px 12px;
+        }
+    
+        header nav ul.submenu li:hover {
+            background-color: var(--yellow);
+        }
+    
+        header nav ul.submenu li a {
+            text-decoration: none;
+        }
+    
+        header nav ul.submenu li a:hover {
+            border-bottom: 1px solid var(--black);
+    
+        }
+    
+        header .favicon-search li {
+            padding-left: 15px;
+        }
+    
+        header .favicon-search a {
+            font-weight: normal;
+        }
+    
+    
+        /*MAIN*/
+        main {
+            height: calc(100vh - 78px);
+            display: grid;
+            grid-template-columns: 3fr 2fr;
+    
+        }
+    
+        main .box {
+            width: 60%;
+            overflow: hidden;
+            background-color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 40px;
+            padding: 20px;
+            position: relative;
+        }
+    
+        main fieldset {
+            border: 4px solid var(--yellow);
+        }
+    
+        main legend {
+            text-align: center;
+            padding: 0 10px;
+            text-transform: uppercase;
+            color: var(--brown);
+            font-weight: 700;
+        }
+    
+        main .box-body {
+    
+            padding: 30px;
+            text-align: center;
+    
+        }
+    
+        main .box-body h2 {
+            font-size: 48px;
+        }
+    
+        main .box-body h2 span {
+            display: block;
+        }
+    
+        main .box-body a i {
+            color: var(--brown);
+        }
+    
+        main .box-body a {
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+    
+        main .box-body p {
+            padding: 20px 0px;
+            line-height: 28px;
+        }
+    
+        main .today-recipes {
+            background-image: url(../img/salad.webp);
+            background-size: cover;
+            background-color: var(--yellow);
+            height: calc(100vh - 78px);
+            overflow: hidden;
+    
+            display: grid;
+            grid-template-columns: 1fr;
+            align-items: flex-end;
+            justify-items: center;
+        }
+    
+        main .recipes-suggestions {
+            height: calc(100vh - 78px);
+            overflow-y: scroll;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: var(--body-background);
+        }
+    
+        main .recipes {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    
+        /*BLOG*/
+        section.blog {
+            padding: 70px 0px;
+        }
+    
+        section h2,
+        .category h2 {
+            text-align: center;
+    
+    
+        }
+    
+        section.blog .articles,
+        section.receipes .articles {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+    
+        .articles .card .card-image img {
+            width: 315px;
+        }
+    
+        /*TEAM*/
+        section.team {
+            background-color: white;
+            padding: 70px 0px;
+        }
+    
+        section.team .container {
+            display: grid;
+            grid-template-columns: 2fr 3fr;
+            column-gap: 40px;
+        }
+    
+        section.team .about-us p {
+            line-height: 25px;
+            margin-bottom: 20px;
+    
+        }
+    
+        section.team .about-us img {
+            width: 70px;
+    
+        }
+    
+        section.team .about-us a {
+            background-color: rgba(255, 196, 161, .4);
+            text-decoration: none;
+            text-transform: uppercase;
+            margin-top: 20px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 25px;
+    
+    
+        }
+    
+        section.team .about-us a i {
+            color: var(--brown);
+        }
+    
+        section.team .members {
+            width: 100%;
+            height: 430px;
+            display: grid;
+            background-color: rgba(255, 196, 161, .4);
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            padding: 20px;
+        }
+    
+        section.team .members a {
+            text-align: center;
+            text-decoration: none;
+        }
+    
+        section.team .members img {
+            width: 100px;
+            border-radius: 50%;
+            padding: 2px;
+            border: 1px solid var(--green);
+        }
+    
+        section.team .member span.fullname {
+            font-size: 14px;
+            color: var(--green);
+            display: inline-block;
+            margin-bottom: 5px;
+    
+        }
+    
+        section.team .member span.role {
+            font-size: 13px;
+            color: var(--green);
+    
+        }
+    
+        section.team .about-us h2 span {
+            display: block;
+        }
+    
+        .about-us h2 {
+            font-size: 30px;
+            margin: 20px 0px;
+        }
+    
+        /*receipes*/
+    
+        section.receipes {
+            padding: 20px 0px 70px 50px;
+        }
+    
+        section.receipes .category {
+            padding-top: 50px;
+        }
+    
+    
+        /*FOOTER*/
+    
+        footer {
+            padding: 70px 0px;
+            background-color: white;
+            border: 1px solid var(--yellow);
+        }
+    
+        footer .container {
+            display: grid;
+            grid-template-columns: 4fr 2fr 2fr 1fr;
+        }
+    
+        footer ul {
+            list-style-type: none;
+        }
+    
+        footer ul li {
+            line-height: 24px;
+        }
+    
+        footer div.menu a {
+            color: var(--green);
+            font-weight: bold;
+    
+        }
+    
+        footer ul a {
+            text-decoration: none;
+        }
+    
+        footer .newsletter-social-media img {
+            width: 100px;
+        }
+    
+        footer .newsletter input {
+            border: 1px solid #7ebe83;
+            border-radius: 3px;
+            width: 100%;
+            padding: 8px;
+        }
+    
+        footer .newsletter form {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+    
+        footer .newsletter {
+            width: 340px;
+        }
+    
+        footer .newsletter h3 {
+            margin-top: 20px;
+            font-family: var(--title-font);
+        }
+    
+        footer .newsletter button {
+            padding: 8px;
+            background-color: var(--green);
+            border-radius: 3px;
+            border: 0;
+            color: white;
+            margin-left: 8px;
+            width: 90px;
+            font-size: 14px;
+            text-transform: uppercase;
+    
+        }
+    
+        footer .newsletter button:hover {
+            background-color: rgb(8, 81, 81);
+        }
+    
+        .newsletter h3 {
+            font-size: 23px;
+            line-height: 26px;
+        }
+    
+        .newsletter p {
+            padding: 10px 0;
+        }
+    
+        footer .social-media ul {
+    
+            width: 320px;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+    
+        footer .social-media ul li a {
+            display: inline-block;
+            background-color: var(--brown);
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            color: white;
+            text-align: center;
+            line-height: 34px;
+            transition: all .3s;
+        }
+    
+        footer .social-media ul li span {
+            line-height: 34px;
+        }
+    
+        footer .social-media ul li i {
+            color: white;
+        }
+    
+        footer .links-center {
+            justify-self: center;
+        }
+    
+        footer .links-end {
+            justify-self: flex-end;
+    
+        }
+    
+        footer .links-center li,
+        footer .links-end li {
+            line-height: 32px;
+        }
+    
+        /* .menu li {
+        line-height: 28px;
+    } */
+        .social-media ul li a:hover {
+            background-color: var(--green);
+            cursor: pointer;
+        }
+}
+/*medium devices*/
+@media (min-width:640x){
+
+}
+/*small devices*/
+@media (max-width:640px){
+
+}
